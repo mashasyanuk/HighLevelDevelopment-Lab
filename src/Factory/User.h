@@ -5,11 +5,12 @@
 namespace YMA{
     class User {
         public:
+          User();
           User(std::string name, std::string surname, size_t age, std::string login, std::string password);
-          virtual void printPublicData() = 0;
-          virtual void printPersonalData() = 0;
+          virtual void printPublicData();
+          virtual void printPersonalData();
 
-        private:
+        protected:
             std::string m_name;
             std::string m_surname;
             size_t m_age;

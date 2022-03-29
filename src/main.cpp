@@ -2,6 +2,9 @@
 #include <cmath>
 #include "CMenu/CMenu.h"
 #include "CMenu/CMenuItem.h"
+#include "Factory/Employee/Employee.h"
+#include "Factory/Product/Product.h"
+#include "Factory/Supplier/Supplier.h"
 
 #pragma region functions
 int Say_Hi() {
@@ -61,10 +64,9 @@ int GetEmployee(){
 
 int GetSupplier(){
   using namespace YMA;
-  Product Cheese = new Product();
-  Cheese("Milk and others", "Cheese", "30", "400" );
-  Supplier Anatolyi=new Supplier();
-  Anatolyi("Anatolyi", "Sverdlov", 30, "anat_sverd99", "getout32", Cheese);
+
+  Product Cheese("Milk and others", "Cheese", 30, 400 );
+  Supplier Anatolyi("Anatolyi", "Sverdlov", 30, "anat_sverd99", "getout32", Cheese);
   Cheese.printData();
   Anatolyi.printPublicData();
   Anatolyi.printPersonalData();
@@ -72,10 +74,10 @@ int GetSupplier(){
 }
 #pragma endregion
 
-const int items_number = 6;
+const int items_number=6;
 
 int main() {
-        using namespace YMA;
+    using namespace YMA;
         char firstPoint[50]="Say hi";
         char secondPoint[50]="Favourite Name";
         char thirdPoint[50]="Calculate";
@@ -83,13 +85,13 @@ int main() {
         char fifthPoint[50]="Employee";
         char sixthPoint[50]="Supplier";
 
-        CMenuItem items[items_number] {
-          CMenuItem{firstPoint, Say_Hi},
-          CMenuItem{secondPoint, Favourite_Name},
-          CMenuItem{thirdPoint, Calculate},
-          CMenuItem{fourthPoint, Draw},
-          CMenuItem{fifthPoint, GetEmployee},
-          CMenuItem{sixthPoint, GetSupplier}
+        CMenuItem items[items_number]{ 
+            CMenuItem(firstPoint, Say_Hi), 
+            CMenuItem(secondPoint, Favourite_Name),
+            CMenuItem(thirdPoint, Calculate),
+            CMenuItem(fourthPoint, Draw),
+            CMenuItem(fifthPoint, GetEmployee),
+            CMenuItem(sixthPoint, GetSupplier)
         };
         CMenu menu("My console menu", items, items_number);
         while (menu.runCommand()){};

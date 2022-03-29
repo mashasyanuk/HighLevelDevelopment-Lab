@@ -4,14 +4,17 @@
 namespace YMA{
   class Product{
   public:
-
-    Product(std::string type, std::string product, std::string amount, std::string price);
+    Product();
+    Product(std::string name, std::string type, size_t amount, size_t price);
     virtual void printData();
+    std::string getType();
+
+  protected:
+    std::string p_type;
 
   private:
-    std::string m_name;
-    std::string m_type;
-    size_t m_amount;
-    size_t m_price;
+    std::string p_name;
+    size_t p_amount;
+    size_t p_price;
   };
 }
