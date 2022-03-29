@@ -2,10 +2,12 @@
 #include <iostream>
 
 namespace YMA {
-    CMenuItem::CMenuItem(char *item_name, Func func): m_item_name(item_name), m_func(func) {}
 
     char * CMenuItem::getName() {
         return m_item_name;
+    }
+    CMenuItem::Func CMenuItem::getFunc(){
+        return m_func;
     }
 
     void CMenuItem::print() {
@@ -15,4 +17,5 @@ namespace YMA {
     int CMenuItem::run() {
         return m_func();
     }
+    CMenuItem::CMenuItem(char* m_item_name, Func m_func){}
 }

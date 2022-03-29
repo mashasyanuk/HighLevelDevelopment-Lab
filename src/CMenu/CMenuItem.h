@@ -5,12 +5,16 @@ namespace YMA {
 class CMenuItem {
     public:
         typedef int(*Func)();
-        CMenuItem(char *, Func);
-        Func m_func{};
-        char *m_item_name{};
+        Func getFunc();
         char * getName();
+        CMenuItem();
+        CMenuItem(char *, Func);
         void print();
         int run();
+    private:
+        char *m_item_name;
+        Func m_func;
+
     };
 }
 
