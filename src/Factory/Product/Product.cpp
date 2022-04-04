@@ -5,7 +5,6 @@ namespace YMA{
   Product::Product(std::string name, std::string type, size_t amount, size_t price){
     p_name = name;
     p_type = type;
-    p_amount = amount;
     p_price = price;
   }
 
@@ -16,7 +15,7 @@ namespace YMA{
     std::cout << "Price per one: " << p_price<< std::endl;
   }
 
-  std::string getType(){
+  std::string Product::getType(){
     return p_type;
   }
     

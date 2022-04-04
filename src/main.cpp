@@ -14,7 +14,7 @@ int Say_Hi() {
 
 int Favourite_Name() {
     std::cout << "Мое любимое женское имя - Адель\n\n";
-    return 0;
+    return 1;
 }
 
 int Calculate(){
@@ -22,7 +22,7 @@ int Calculate(){
     std::cout << std::endl << "Введите любое положительное число: ";
     std::cin>> number;
     std::cout << std::endl << "Корень из числа" << number << "равно " << pow(number, 0.5) << std::endl;
-    return 0;
+    return 2;
 }
 
 int Draw() {
@@ -51,7 +51,7 @@ int Draw() {
         }
         std::cout << std::endl;
     }
-    return 0;
+    return 3;
 }
 
 int GetEmployee(){
@@ -59,7 +59,7 @@ int GetEmployee(){
   Employee Alex("Alexander", "Kreis", 56, "alex_kreis007", "bestofthebest", "Director");
   Alex.printPublicData();
   Alex.printPersonalData();
-  return 0;
+  return 4;
 }
 
 int GetSupplier(){
@@ -70,7 +70,7 @@ int GetSupplier(){
   Cheese.printData();
   Anatolyi.printPublicData();
   Anatolyi.printPersonalData();
-  return 0;
+  return 5;
 }
 #pragma endregion
 
@@ -85,7 +85,7 @@ int main() {
         char fifthPoint[50]="Employee";
         char sixthPoint[50]="Supplier";
 
-        CMenuItem items[items_number]{ 
+        CMenuItem items[items_number]{
             CMenuItem(firstPoint, Say_Hi), 
             CMenuItem(secondPoint, Favourite_Name),
             CMenuItem(thirdPoint, Calculate),
