@@ -17,5 +17,5 @@ namespace YMA {
     int CMenuItem::run() {
         return m_func();
     }
-    CMenuItem::CMenuItem(char* m_item_name, Func m_func){}
+    CMenuItem::CMenuItem(char* m_item_name, Func m_func){};
 }

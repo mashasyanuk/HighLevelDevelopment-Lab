@@ -78,23 +78,23 @@ const int items_number=6;
 
 int main() {
     using namespace YMA;
-        char firstPoint[50]="Say hi";
-        char secondPoint[50]="Favourite Name";
-        char thirdPoint[50]="Calculate";
-        char fourthPoint[50]="Draw";
-        char fifthPoint[50]="Employee";
-        char sixthPoint[50]="Supplier";
+    char firstPoint[50]="Say hi";
+    char secondPoint[50]="Favourite Name";
+    char thirdPoint[50]="Calculate";
+    char fourthPoint[50]="Draw";
+    char fifthPoint[50]="Employee";
+    char sixthPoint[50]="Supplier";
 
-        CMenuItem items[items_number]{
-            CMenuItem(firstPoint, Say_Hi), 
-            CMenuItem(secondPoint, Favourite_Name),
-            CMenuItem(thirdPoint, Calculate),
-            CMenuItem(fourthPoint, Draw),
-            CMenuItem(fifthPoint, GetEmployee),
-            CMenuItem(sixthPoint, GetSupplier)
-        };
-        CMenu menu("My console menu", items, items_number);
-        while (menu.runCommand()){};
+    CMenuItem items[items_number]{
+        CMenuItem("Say hi", Say_Hi),
+        CMenuItem("Favourite Name", Favourite_Name),
+        CMenuItem("Calculate", Calculate),
+        CMenuItem("Draw", Draw),
+        CMenuItem("Employee", GetEmployee),
+        CMenuItem("Supplier", GetSupplier)
+    };
+    CMenu menu("My console menu", items, items_number);
+    while (menu.runCommand()){};
 
-        return 0;
+    return 0;
 }
