@@ -6,7 +6,7 @@ namespace YMA{
   public:
     Product();
     Product(std::string name, std::string type, size_t amount, size_t price);
-    virtual void printData();
+    void printData();
     std::string getType();
 
   protected:

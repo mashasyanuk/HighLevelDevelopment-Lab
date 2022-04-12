@@ -75,6 +75,7 @@ int GetSupplier(){
 #pragma endregion
 
 const int items_number=6;
+char name[16]="My console menu";
 
 int main() {
     using namespace YMA;
@@ -84,16 +85,16 @@ int main() {
     char fourthPoint[50]="Draw";
     char fifthPoint[50]="Employee";
     char sixthPoint[50]="Supplier";
-
-    CMenuItem items[items_number]{
-        CMenuItem("Say hi", Say_Hi),
-        CMenuItem("Favourite Name", Favourite_Name),
-        CMenuItem("Calculate", Calculate),
-        CMenuItem("Draw", Draw),
-        CMenuItem("Employee", GetEmployee),
-        CMenuItem("Supplier", GetSupplier)
+    
+    CMenuItem items[6]={
+        CMenuItem(firstPoint, Say_Hi),
+        CMenuItem(secondPoint, Favourite_Name),
+        CMenuItem(thirdPoint, Calculate),
+        CMenuItem(fourthPoint, Draw),
+        CMenuItem(fifthPoint, GetEmployee),
+        CMenuItem(sixthPoint, GetSupplier)
     };
-    CMenu menu("My console menu", items, items_number);
+    CMenu menu(name, items, items_number);
     while (menu.runCommand()){};
 
     return 0;

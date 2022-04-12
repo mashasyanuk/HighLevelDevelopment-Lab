@@ -4,12 +4,13 @@
 #include <string.h>
 
 namespace YMA{
-    class Supplier: public User, public Product{
+    class Supplier: public User{
         public:
             Supplier();
-            virtual void printPublicData();
+            void printPublicData();
+            void printPersonalData();
             Supplier(std::string name, std::string surname, size_t age, std::string login, std::string password, Product product); //std::string name, std::string surname, size_t age, std::string login, std::string password,
-        private:
+        protected:
             std::string m_type;
     };
 }

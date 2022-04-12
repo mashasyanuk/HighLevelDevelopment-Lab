@@ -4,11 +4,21 @@
     // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        
+        {
+            "name": "(lldb) Подключить",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "Введите имя программы, например: ${workspaceFolder}/a.out",
+            "processId": "${command:pickProcess}",
+            "MIMode": "lldb"
+        },
+
         {
             "name": "(lldb) Запустить",
             "type": "cppdbg",
             "request": "launch",
-            "program": "Введите имя программы, например: ${workspaceFolder}/a.out",
+            "program": "${workspaceFolder}/main.cpp",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

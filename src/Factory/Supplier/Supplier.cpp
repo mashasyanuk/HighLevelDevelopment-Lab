@@ -1,7 +1,6 @@
 #include "Supplier.h"
 #include <iostream>
-#include <string.h>
-//add product to .h
+
 namespace YMA{ 
     Supplier::Supplier(std::string name, std::string surname, size_t age, std::string login, std::string password, Product product):User(name, surname,  age, login, password ){ //std::string name, std::string surname, size_t age, std::string login, std::string password,
       m_type=product.getType();
@@ -12,4 +11,8 @@ namespace YMA{
       std::cout << "Age: " << m_age << std::endl;
       std::cout << "Type of products: " << m_type <<std::endl;
     }
+    void Supplier::printPersonalData(){
+    std::cout << "Login: " << m_login << std::endl;
+    std::cout << "Password: " << m_password<< std::endl;
+  }
 }
