@@ -18,7 +18,7 @@ int Favourite_Name() {
 }
 
 int Calculate(){
-    unsigned int number=0;
+    int number=0;
     std::cout << std::endl << "Введите любое положительное число: ";
     std::cin>> number;
     std::cout << std::endl << "Корень из числа" << number << "равно " << pow(number, 0.5) << std::endl;
@@ -66,7 +66,7 @@ int GetSupplier(){
   using namespace YMA;
 
   Product Cheese("Milk and others", "Cheese", 30, 400 );
-  Supplier Anatolyi("Anatolyi", "Sverdlov", 30, "anat_sverd99", "getout32", Cheese);
+  Supplier Anatolyi("Anatolyi", "Sverdlov", 30, "anat_sverd99", "getout32", "Milk and others");
   Cheese.printData();
   Anatolyi.printPublicData();
   Anatolyi.printPersonalData();
@@ -85,7 +85,7 @@ int main() {
     char fourthPoint[50]="Draw";
     char fifthPoint[50]="Employee";
     char sixthPoint[50]="Supplier";
-    
+
     CMenuItem items[6]={
         CMenuItem(firstPoint, Say_Hi),
         CMenuItem(secondPoint, Favourite_Name),

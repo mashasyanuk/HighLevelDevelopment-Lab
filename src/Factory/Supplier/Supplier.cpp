@@ -2,8 +2,8 @@
 #include <iostream>
 
 namespace YMA{ 
-    Supplier::Supplier(std::string name, std::string surname, size_t age, std::string login, std::string password, Product product):User(name, surname,  age, login, password ){ //std::string name, std::string surname, size_t age, std::string login, std::string password,
-      m_type=product.getType();
+    Supplier::Supplier(std::string name, std::string surname, size_t age, std::string login, std::string password, std::string type):User(name, surname,  age, login, password ){ //std::string name, std::string surname, size_t age, std::string login, std::string password,
+      m_type=type;
     }
     void Supplier::printPublicData(){
       std::cout << "Name: " << m_name << std::endl;

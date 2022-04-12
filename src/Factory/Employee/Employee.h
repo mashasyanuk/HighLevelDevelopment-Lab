@@ -1,7 +1,8 @@
 #pragma once
 #include "../User.h"
 #include "../Product/Product.h"
-#include <string.h>
+#include <string>
+#include <cstddef>
 
 
 namespace YMA{
