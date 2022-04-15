@@ -1,15 +1,25 @@
 cmake_minimum_required(VERSION 3.10)
 
 # set the project name
-project(HilevelDevelepment)
+project(HighlevelDevelepment)
 
 # add src/
 add_subdirectory(src)
 # add libs
-# add_library(
-#     CMenu
-#     CMenu/CMenu.cpp
-# )
+add_library(
+     CMenu
+     CMenu/CMenu.cpp
+     CMenu/CMenuItem.cpp
+     Factory
+     Factory/Employee
+     Factory/Employee/Employee.cpp
+     Factory/Product
+     Factory/Product/Product.cpp
+     Factory/Supplier
+     Factory/Supplier/Supplier.cpp
+     User.cpp
+     main.cpp
+)
 
 # add_library(
 #     CMenuItem
