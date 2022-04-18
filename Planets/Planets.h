@@ -6,7 +6,7 @@ using namespace sf;
 
 class Planet{
     public:
-    Planet(float, float){};
+    Planet(float, float);
 
     void setPlanetColor(sf::Color color);
 
