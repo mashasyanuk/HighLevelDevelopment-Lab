@@ -14,8 +14,6 @@ class Planet{
 
     void setPosition(int posX, int posY);
 
-    void setPos(int posX, int posY);
-
     void draw(sf::RenderWindow& window);
 
 
