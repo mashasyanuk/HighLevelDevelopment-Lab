@@ -7,7 +7,7 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(200, 200), "SFML test window!", sf::Style::Default, settings);
 
     Planet earth(30, 300);
-    earth.setPos(100, 100);
+    earth.setPosition(100, 100);
 
     sf::Clock clock;
 

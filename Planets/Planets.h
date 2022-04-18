@@ -6,15 +6,13 @@ using namespace sf;
 
 class Planet{
     public:
-    Planet(float, float){};
+    Planet(float, float);
 
     void setPlanetColor(sf::Color color);
 
     void setTrajectoryColor(sf::Color color);
 
     void setPosition(int posX, int posY);
-
-    void setPos(int posX, int posY);
 
     void draw(sf::RenderWindow& window);
 
