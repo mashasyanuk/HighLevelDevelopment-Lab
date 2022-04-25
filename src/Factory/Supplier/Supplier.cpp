@@ -15,4 +15,9 @@ namespace YMA{
   //   std::cout << "Login: " << m_login << std::endl;
   //   std::cout << "Password: " << m_password<< std::endl;
   // }
+
+  bool operator==(const Supplier &s1, const Supplier &s2){
+    return s1.m_type==s2.m_type;
+  };
+  
 }

@@ -23,6 +23,16 @@ namespace YMA{
     std::cout << "Price per one: " << product.p_price<< std::endl;
   }
 
+  bool operator>(const Product &p1, const Product &p2){
+    return p1.p_amount>p2.p_amount;
+  }
+  bool operator<(const Product &p1, const Product &p2){
+      return p1.p_amount<p2.p_amount;
+  }
+  bool operator==(const Product &p1, const Product &p2){
+    return p1.p_amount==p2.p_amount;
+  }
+
 
   std::string Product::getType(){
     return p_type;

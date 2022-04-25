@@ -12,6 +12,8 @@ namespace YMA{
           void printPublicData() ;
    //       void printPersonalData() ;
           Employee(std::string name, std::string surname, size_t age, std::string login, std::string password, std::string post);
+          friend bool operator==(const Employee &d1, const Employee &d2); //сравнение по должности
+
         private:
           std::string e_post;
     };

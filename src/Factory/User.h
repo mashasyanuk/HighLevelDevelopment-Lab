@@ -12,7 +12,7 @@ namespace YMA{
   //        virtual void printPersonalData()=0; //чисто виртуальная функция и абстрактный класс
           friend User operator+(User man);
 
-        protected:
+        private: // дружественные функции имеют доступ к приватным переменным
             std::string m_name;
             std::string m_surname;
             size_t m_age;

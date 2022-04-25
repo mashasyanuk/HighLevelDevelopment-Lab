@@ -83,6 +83,10 @@ char name[16]="My console menu";
 
 int main() {
     using namespace YMA;
+
+    
+
+
     char firstPoint[50]="Say hi";
     char secondPoint[50]="Favourite Name";
     char thirdPoint[50]="Calculate";

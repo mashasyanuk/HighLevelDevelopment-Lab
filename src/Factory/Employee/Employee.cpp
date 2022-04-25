@@ -16,5 +16,10 @@ namespace YMA{
       // std::cout << "Age: " << m_age << std::endl;
       std::cout << "Post: " << e_post << std::endl;
     }
+    bool operator== (const Employee &d1, const Employee &d2){
+      return d1.e_post==d2.e_post;
+    };
+
+
 
 }
