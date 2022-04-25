@@ -2,7 +2,14 @@
 #include <iostream>
 
 namespace YMA{
+  User::User(){
+    m_name="no name";
+    m_surname="no surname";
+    m_age=0;
+    m_login="no login";
+    m_password="no password";
 
+  }
   User::User(std::string name, std::string surname, size_t age, std::string login, std::string password){
     m_name=name;
     m_surname=surname;

@@ -2,9 +2,13 @@
 #include <iostream>
 
 namespace YMA{ 
+  Supplier::Supplier(){
+    m_type="No type";
+  }
     Supplier::Supplier(std::string name, std::string surname, size_t age, std::string login, std::string password, std::string type):User(name, surname,  age, login, password ){ //std::string name, std::string surname, size_t age, std::string login, std::string password,
       m_type=type;
     }
+
     void Supplier::printPublicData(){
       // std::cout << "Name: " << m_name << std::endl;
       // std::cout << "Surname: " << m_surname << std::endl;
@@ -19,5 +23,5 @@ namespace YMA{
   bool operator==(const Supplier &s1, const Supplier &s2){
     return s1.m_type==s2.m_type;
   };
-  
+
 }

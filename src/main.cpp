@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cmath>
+#include <list>
+#include <tuple>
 #include "CMenu/CMenu.h"
 #include "CMenu/CMenuItem.h"
 #include "Factory/Employee/Employee.h"
@@ -78,14 +80,22 @@ int GetSupplier(){
 }
 #pragma endregion
 
+
+
+int amount_emp=0;
+int amount_sup=0;
+int amount_pro=0;
 const int items_number=6;
 char name[16]="My console menu";
 
 int main() {
+    unsigned int amount_emp=0;
+  
     using namespace YMA;
 
-    
-
+    Employee mass_Emp[amount_emp];
+    Supplier mass_Sup[amount_sup];
+    Product mass_Pro[amount_pro];
 
     char firstPoint[50]="Say hi";
     char secondPoint[50]="Favourite Name";

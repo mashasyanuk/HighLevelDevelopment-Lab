@@ -2,6 +2,11 @@
 #include <iostream>
 
 namespace YMA{
+
+  Employee::Employee(){
+    e_post="no post";
+  }
+
     Employee::Employee(std::string name, std::string surname, size_t age, std::string login, std::string password, std::string post):User(name, surname,  age, login, password){
       e_post=post;
     }

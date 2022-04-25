@@ -2,6 +2,13 @@
 #include <iostream>
 
 namespace YMA{
+  Product::Product(){
+    p_name = "no name";
+    p_type = "no type";
+    p_amount = 0;
+    p_price = 0;
+
+  }
   Product::Product(std::string name, std::string type, size_t amount, size_t price){
     p_name = name;
     p_type = type;
