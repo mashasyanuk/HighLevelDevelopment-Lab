@@ -58,7 +58,8 @@ int GetEmployee(){
   using namespace YMA;
   Employee Alex("Alexander", "Kreis", 56, "alex_kreis007", "bestofthebest", "Director");
   Alex.printPublicData();
-  Alex.printPersonalData();
+  User(Alex);
+//  Alex.printPersonalData();
   return 4;
 }
 
@@ -67,9 +68,12 @@ int GetSupplier(){
 
   Product Cheese("Milk and others", "Cheese", 30, 400 );
   Supplier Anatolyi("Anatolyi", "Sverdlov", 30, "anat_sverd99", "getout32", "Milk and others");
-  Cheese.printData();
+ // Cheese.printData();
+ Product (Cheese);
+ User (Anatolyi);
+
   Anatolyi.printPublicData();
-  Anatolyi.printPersonalData();
+//  Anatolyi.printPersonalData();
   return 5;
 }
 #pragma endregion

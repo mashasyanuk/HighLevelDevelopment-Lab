@@ -9,7 +9,7 @@ namespace YMA{
         public:
             Supplier();
             void printPublicData();
-            void printPersonalData();
+ //           void printPersonalData();
             Supplier(std::string name, std::string surname, size_t age, std::string login, std::string password, std::string type); //std::string name, std::string surname, size_t age, std::string login, std::string password,
         protected:
             std::string m_type;

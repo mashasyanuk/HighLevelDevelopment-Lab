@@ -6,13 +6,13 @@ namespace YMA{
       m_type=type;
     }
     void Supplier::printPublicData(){
-      std::cout << "Name: " << m_name << std::endl;
-      std::cout << "Surname: " << m_surname << std::endl;
-      std::cout << "Age: " << m_age << std::endl;
+      // std::cout << "Name: " << m_name << std::endl;
+      // std::cout << "Surname: " << m_surname << std::endl;
+      // std::cout << "Age: " << m_age << std::endl;
       std::cout << "Type of products: " << m_type <<std::endl;
     }
-    void Supplier::printPersonalData(){
-    std::cout << "Login: " << m_login << std::endl;
-    std::cout << "Password: " << m_password<< std::endl;
-  }
+  //   void Supplier::printPersonalData(){
+  //   std::cout << "Login: " << m_login << std::endl;
+  //   std::cout << "Password: " << m_password<< std::endl;
+  // }
 }
