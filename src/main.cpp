@@ -1,10 +1,4 @@
-#include <iostream>
-#include <cmath>
-#include "CMenu/CMenu.h"
-#include "CMenu/CMenuItem.h"
-#include "Factory/Employee/Employee.h"
-#include "Factory/Product/Product.h"
-#include "Factory/Supplier/Supplier.h"
+bkb
 
 #pragma region functions
 int Say_Hi() {
