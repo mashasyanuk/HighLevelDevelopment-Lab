@@ -2,13 +2,7 @@
 #include <iostream>
 
 namespace YMA{
-  Product::Product(){
-    p_name = "no name";
-    p_type = "no type";
-    p_amount = 0;
-    p_price = 0;
 
-  }
   Product::Product(std::string name, std::string type, size_t amount, size_t price){
     p_name = name;
     p_type = type;
@@ -16,32 +10,28 @@ namespace YMA{
     p_price = price;
   }
 
-  // void Product::printData(){
-  //   std::cout << "Name of product: " << p_name << std::endl;
-  //   std::cout << "Type of product: " << p_type << std::endl;
-  //   std::cout << "Amount: " << p_amount<< std::endl;
-  //   std::cout << "Price per one: " << p_price<< std::endl;
-  // }
-
-  Product operator+(Product product){
-      std::cout << "Name of product: " << product.p_name << std::endl;
-    std::cout << "Type of product: " << product.p_type << std::endl;
-    std::cout << "Amount: " << product.p_amount<< std::endl;
-    std::cout << "Price per one: " << product.p_price<< std::endl;
+  std::ostream& operator<<(std::ostream& out, Product& product){
+    out << "Name of product: " << product.p_name << std::endl;
+    out << "Type of product: " << product.p_type << std::endl;
+    out << "Amount: " << product.p_amount<< std::endl;
+    out << "Price per one: " << product.p_price<< std::endl;
+    return out;
   }
 
   bool operator>(const Product &p1, const Product &p2){
     return p1.p_amount>p2.p_amount;
   }
+
   bool operator<(const Product &p1, const Product &p2){
       return p1.p_amount<p2.p_amount;
   }
+
   bool operator==(const Product &p1, const Product &p2){
     return p1.p_amount==p2.p_amount;
   }
 
-
   std::string Product::getType(){
     return p_type;
   }
+
 }

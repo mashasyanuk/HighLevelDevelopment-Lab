@@ -59,9 +59,7 @@ int Draw() {
 int GetEmployee(){
   using namespace YMA;
   Employee Alex("Alexander", "Kreis", 56, "alex_kreis007", "bestofthebest", "Director");
-  Alex.printPublicData();
-  User(Alex);
-//  Alex.printPersonalData();
+  std::cout << Alex << std::endl;
   return 4;
 }
 
@@ -70,22 +68,20 @@ int GetSupplier(){
 
   Product Cheese("Milk and others", "Cheese", 30, 400 );
   Supplier Anatolyi("Anatolyi", "Sverdlov", 30, "anat_sverd99", "getout32", "Milk and others");
- // Cheese.printData();
- Product (Cheese);
- User (Anatolyi);
-
-  Anatolyi.printPublicData();
-//  Anatolyi.printPersonalData();
+  std::cout << Anatolyi << std::endl;
+  std::cout << Product << std::endl;
   return 5;
 }
 #pragma endregion
 
 
 
-int amount_emp=0;
-int amount_sup=0;
-int amount_pro=0;
+int amount_emp=2;
+int amount_sup=2;
+int amount_pro=2;
+
 const int items_number=6;
+
 char name[16]="My console menu";
 
 int main() {
@@ -96,6 +92,11 @@ int main() {
     Employee mass_Emp[amount_emp];
     Supplier mass_Sup[amount_sup];
     Product mass_Pro[amount_pro];
+    
+    for(int i=0; i<amount_emp; i++){
+        std::cout << mass_Emp[i] << std::endl;
+    }
+
 
     char firstPoint[50]="Say hi";
     char secondPoint[50]="Favourite Name";
