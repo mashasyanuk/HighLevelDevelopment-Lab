@@ -18,6 +18,22 @@ namespace YMA{
     return out;
   }
 
+  std::istream& operator>>(std::istream& in, Product& product){
+    std::cout << "Name of product: " ;
+    in >> product.p_name ;
+
+    std::cout << "Type of product: " ;
+    in >> product.p_type ;
+
+    std::cout << "Amount: " ;
+    in >> product.p_amount ;
+
+    std::cout << "Price per one: ";
+    in >> product.p_price ;
+
+    return in;
+  }
+
   bool operator>(const Product &p1, const Product &p2){
     return p1.p_amount>p2.p_amount;
   }

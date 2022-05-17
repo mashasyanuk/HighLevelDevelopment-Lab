@@ -1,8 +1,0 @@
-{
-    "c-cpp-compile-run.run-in-external-terminal": true,
-    "files.associations": {
-        "string": "cpp",
-        "iosfwd": "cpp",
-        "ostream": "cpp"
-    }
-}
