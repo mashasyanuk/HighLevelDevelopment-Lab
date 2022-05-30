@@ -3,7 +3,7 @@
 
 namespace YMA {
     CMenu::CMenu(char *title, CMenuItem *items, size_t count) : m_title(title), m_items(items), m_count(count) {}
-    
+
     int CMenu::getSelect() const {
         return m_select;
     }

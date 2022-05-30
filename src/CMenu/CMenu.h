@@ -17,9 +17,9 @@ class CMenu {
         int runCommand();
 
     private:
-        int m_select;
-        size_t m_count;
-        bool m_running;
+        int m_select=-1;
+        size_t m_count=0;
+        bool m_running=false;
         char *m_title;
         CMenuItem *m_items;
     };

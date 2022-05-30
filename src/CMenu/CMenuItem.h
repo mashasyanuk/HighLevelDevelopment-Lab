@@ -12,7 +12,7 @@ class CMenuItem {
         void print();
         int run();
     private:
-        char *m_item_name;
+        char *m_item_name="a";
         Func m_func;
 
     };

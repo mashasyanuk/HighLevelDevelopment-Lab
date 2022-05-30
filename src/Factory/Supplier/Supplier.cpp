@@ -15,7 +15,7 @@ namespace YMA{
       std::cout << "Password: " << man.m_password<< std::endl;
       std::cout << "Type: " << man.m_type << std::endl;
       return out;
-   };
+   }
 
    std::istream& operator>>(std::istream& in, Supplier& man){
       std::cout << "Name: " ;
@@ -32,17 +32,17 @@ namespace YMA{
       in >>  man.m_type;
       return in;
 
-  };
-   bool operator>(const Supplier &s1, const Supplier &s2){
+    }
+    bool operator>(const Supplier &s1, const Supplier &s2){
        return s1.m_type>s2.m_type;
 
-   };
-   bool operator<(const Supplier &s1, const Supplier &s2){
+    }
+    bool operator<(const Supplier &s1, const Supplier &s2){
        return s1.m_type<s2.m_type;
-   };
+    }
 
     bool operator==(const Supplier &s1, const Supplier &s2){
         return s1.m_type==s2.m_type;
-  };
+    }
 
 }

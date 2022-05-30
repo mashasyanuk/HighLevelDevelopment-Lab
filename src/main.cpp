@@ -6,15 +6,13 @@
 #include "Factory/Product/Product.h"
 #include "Factory/Supplier/Supplier.h"
 
-const int N=50;
+const int N=6;
 
 YMA::Employee mass_Emp[N];
 YMA::Supplier mass_Sup[N];
 YMA::Product mass_Pro[N];
 
-int Menu1();
-int Menu2();
-
+char name[30]="console menu";
 
 int AddProduct();//
 int AddEmployee();//
@@ -40,9 +38,9 @@ int del();
 int sort();
 
 void DeleteElement(int index);
+int Menu1();
+int Menu2();
 
-
-char name[16]="My console menu";
 
 int main(){
 
@@ -51,40 +49,19 @@ int main(){
     return 0;
 }
 
-int Menu1() {
-    using namespace YMA;
-
-    char firstPoint[50]="Say hi";
-    char secondPoint[50]="Favourite Name";
-    char thirdPoint[50]="Calculate";
-    char fourthPoint[50]="Draw";
-    char fifthPoint[50]="Operations with classes";
-
-    CMenuItem items[5]={
-        CMenuItem(firstPoint, Say_Hi),
-        CMenuItem(secondPoint, Favourite_Name),
-        CMenuItem(thirdPoint, Calculate),
-        CMenuItem(fourthPoint, Draw),
-        CMenuItem(fifthPoint, Menu2),
-    };
-    CMenu menu(name, items, 5);
-    while (menu.runCommand()){};
-
-    return 0;
-}
-
 int Menu2() {
-    using namespace YMA;
-    CMenuItem choice[3]={
-            CMenuItem("добавление", add),
-            CMenuItem("удаление", del),
-            CMenuItem("сортировка", sort)
-    };
-    CMenu menu2("Меню 2", choice, 3);
-    while (menu2.runCommand()){};
+   using namespace YMA;
+   CMenuItem choice[3]={
+           CMenuItem("добавление", add),
+           CMenuItem("удаление", del),
+           CMenuItem("сортировка", sort)
+   };
+   CMenu menu2("Меню 2", choice, 3);
+   while (menu2.runCommand()){};
+   return 4;
 
-    return 0;
 }
+
 
 int AddProduct(){
     using namespace YMA;
@@ -117,6 +94,7 @@ int AddEmployee(){
     std::cin >> mass_Emp[countEmployee];
     mass_Emp[countEmployee].exist = true;
     std::cout<<"Готово\n"<< std::endl;
+    return 1;
 
 }
 
@@ -135,6 +113,8 @@ int AddSupplier(){
     std::cin >> mass_Sup[countSupplier];
     mass_Sup[countSupplier].exist = true;
     std::cout<<"Готово\n"<< std::endl;
+    return 1;
+
 
 }
 
@@ -152,7 +132,7 @@ int Calculate(){
     int number=0;
     std::cout << std::endl << "Введите любое положительное число: ";
     std::cin>> number;
-    std::cout << std::endl << "Корень из числа" << number << "равно " << pow(number, 0.5) << std::endl;
+    std::cout << std::endl << "Число в квадрате" << number << "равно " << number*number << std::endl;
     return 2;
 }
 
@@ -206,7 +186,7 @@ int SortEmployee(){
             }
         }
     }
-    return 0;
+    return 1;
 
 }
 
@@ -255,7 +235,7 @@ int SortProduct(){
             }
         }
     }
-    return 0;
+    return 1;
 }
 
 void DeleteElement(int index){
@@ -321,16 +301,20 @@ void DeleteElement(int index){
 int DelEmployee(){
     std::cout<<"Выберите рабочего:"<<std::endl;
     DeleteElement(1);
+    return 1;
 }
 
 int DelSupplier(){
     std::cout<<"Выберите поставщика:"<<std::endl;
     DeleteElement(2);
+    return 1;
 }
 
 int DelProduct(){
     std::cout<<"Выберите продукт:"<<std::abort;
     DeleteElement(3);
+    return 1;
+
 }
 
 int add(){
@@ -341,7 +325,7 @@ int add(){
             CMenuItem("рабочий", AddEmployee),
             CMenuItem("выход", Menu1)
     };
-    CMenu ADD("Меню 2", adding, 3);
+    CMenu ADD("Меню 2", adding, 4);
     while (ADD.runCommand()){};
 
     return 0;
@@ -356,7 +340,7 @@ int del(){
             CMenuItem("рабочий", DelEmployee),
             CMenuItem("выход", Menu1)
     };
-    CMenu DEL("Меню 2", deleting, 3);
+    CMenu DEL("Меню 2", deleting, 4);
     while (DEL.runCommand()){};
 
     return 0;
@@ -370,8 +354,25 @@ int sort(){
             CMenuItem("рабочий", SortEmployee),
             CMenuItem("выход", Menu1)
     };
-    CMenu SORT("Меню 2", sorting, 3);
+    CMenu SORT("Меню 2", sorting, 4);
     while (SORT.runCommand()){};
 
     return 0;
+}
+
+
+int Menu1() {
+    using namespace YMA;
+
+    CMenuItem items[5]={
+        CMenuItem("Say hi", Say_Hi),
+        CMenuItem("Name", Favourite_Name),
+        CMenuItem("Calculate", Calculate),
+        CMenuItem("Draw", Draw),
+        CMenuItem("Classes", Menu2)
+    };
+    CMenu menu(name, items, 5);
+    while (menu.runCommand()){};
+    return 0;
+
 }
