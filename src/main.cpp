@@ -12,7 +12,6 @@ YMA::Employee mass_Emp[N];
 YMA::Supplier mass_Sup[N];
 YMA::Product mass_Pro[N];
 
-char name[30]="console menu";
 
 int AddProduct();//
 int AddEmployee();//
@@ -56,7 +55,7 @@ int Menu2() {
            CMenuItem("удаление", del),
            CMenuItem("сортировка", sort)
    };
-   CMenu menu2("Меню 2", choice, 3);
+   CMenu menu2("Menu 2", choice, 3);
    while (menu2.runCommand()){};
    return 4;
 
@@ -271,7 +270,7 @@ void DeleteElement(int index){
                 std::cin >> numberDelete;
                 mass_Sup[numberDelete - 1].exist = false;
             }
-            else std::cout<<"Список поставщиков пуст\n"<<std::endl;
+            else std::cout<<"Список Postов пуст\n"<<std::endl;
             break;
         }
         case 3: {
@@ -299,19 +298,19 @@ void DeleteElement(int index){
 }
 
 int DelEmployee(){
-    std::cout<<"Выберите рабочего:"<<std::endl;
+    std::cout<<"Choose рабочего:"<<std::endl;
     DeleteElement(1);
     return 1;
 }
 
 int DelSupplier(){
-    std::cout<<"Выберите поставщика:"<<std::endl;
+    std::cout<<"Choose Postа:"<<std::endl;
     DeleteElement(2);
     return 1;
 }
 
 int DelProduct(){
-    std::cout<<"Выберите продукт:"<<std::abort;
+    std::cout<<"Choose Product:"<<std::abort;
     DeleteElement(3);
     return 1;
 
@@ -320,12 +319,12 @@ int DelProduct(){
 int add(){
     using namespace YMA;
     CMenuItem adding[4]={
-            CMenuItem("продукт", AddProduct),
-            CMenuItem("поставщик", AddSupplier),
-            CMenuItem("рабочий", AddEmployee),
-            CMenuItem("выход", Menu1)
+            CMenuItem("Product", AddProduct),
+            CMenuItem("Post", AddSupplier),
+            CMenuItem("worker", AddEmployee),
+            CMenuItem("Exit", Menu1)
     };
-    CMenu ADD("Меню 2", adding, 4);
+    CMenu ADD("Menu 2", adding, 4);
     while (ADD.runCommand()){};
 
     return 0;
@@ -335,12 +334,12 @@ int add(){
 int del(){
     using namespace YMA;
     CMenuItem deleting[4]={
-            CMenuItem("продукт", DelProduct),
-            CMenuItem("поставщик", DelSupplier),
-            CMenuItem("рабочий", DelEmployee),
-            CMenuItem("выход", Menu1)
+            CMenuItem("Product", DelProduct),
+            CMenuItem("Post", DelSupplier),
+            CMenuItem("worker", DelEmployee),
+            CMenuItem("Exit", Menu1)
     };
-    CMenu DEL("Меню 2", deleting, 4);
+    CMenu DEL("Menu 2", deleting, 4);
     while (DEL.runCommand()){};
 
     return 0;
@@ -349,12 +348,12 @@ int del(){
 int sort(){
     using namespace YMA;
     CMenuItem sorting[4]={
-            CMenuItem("продукт", SortProduct),
-            CMenuItem("поставщик", SortSupplier),
-            CMenuItem("рабочий", SortEmployee),
-            CMenuItem("выход", Menu1)
+            CMenuItem("Product", SortProduct),
+            CMenuItem("Post", SortSupplier),
+            CMenuItem("worker", SortEmployee),
+            CMenuItem("Exit", Menu1)
     };
-    CMenu SORT("Меню 2", sorting, 4);
+    CMenu SORT("Menu 2", sorting, 4);
     while (SORT.runCommand()){};
 
     return 0;
@@ -371,7 +370,7 @@ int Menu1() {
         CMenuItem("Draw", Draw),
         CMenuItem("Classes", Menu2)
     };
-    CMenu menu(name, items, 5);
+    CMenu menu("Menu", items, 5);
     while (menu.runCommand()){};
     return 0;
 

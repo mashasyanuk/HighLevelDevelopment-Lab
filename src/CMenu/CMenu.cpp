@@ -2,7 +2,8 @@
 #include <iostream>
 
 namespace YMA {
-    CMenu::CMenu(char *title, CMenuItem *items, size_t count) : m_title(title), m_items(items), m_count(count) {}
+    CMenu::CMenu(char *title, CMenuItem *items, size_t count) : m_title(title), m_items(items), m_count(count) {
+    }
 
     int CMenu::getSelect() const {
         return m_select;
@@ -26,13 +27,16 @@ namespace YMA {
             m_items[i].print();
             std::cout << "\n";
         }
-        std::cout << "0. Exit\n";
+        std::cout << "0. Exit\n"; 
     }
 
     int CMenu::runCommand() {
         print();
-        std::cout << "\n Select >> ";
-        std::cin >> m_select;
+        do {
+            std::cout << "\n Select >> ";
+            std::cin >> m_select;
+        } while (m_select == -1 || m_select > m_count);
+        
         return m_items[m_select - 1].run();
     }
 }
