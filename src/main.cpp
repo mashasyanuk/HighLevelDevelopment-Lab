@@ -51,9 +51,9 @@ int main(){
 int Menu2() {
    using namespace YMA;
    CMenuItem choice[3]={
-           CMenuItem("добавление", add),
-           CMenuItem("удаление", del),
-           CMenuItem("сортировка", sort)
+           CMenuItem("Добавление", add),
+           CMenuItem("Удаление", del),
+           CMenuItem("Сортировка", sort)
    };
    CMenu menu2("Menu 2", choice, 3);
    while (menu2.runCommand()){};
@@ -71,7 +71,7 @@ int AddProduct(){
         countProducts++;
         std::cout << countProducts << " " ;
     }
-    std::cout << "Введите данные нового покупателя:" << std::endl;
+    std::cout << "Введите данные нового продукта:" << std::endl;
 
     std::cin >> mass_Pro[countProducts];
     mass_Pro[countProducts].exist = true;
@@ -107,7 +107,7 @@ int AddSupplier(){
         std::cout << countSupplier << " " ;
     }
 
-    std::cout << "Введите данные нового покупателя:" << std::endl;
+    std::cout << "Введите данные нового поставщика:" << std::endl;
 
     std::cin >> mass_Sup[countSupplier];
     mass_Sup[countSupplier].exist = true;
@@ -131,7 +131,7 @@ int Calculate(){
     int number=0;
     std::cout << std::endl << "Введите любое положительное число: ";
     std::cin>> number;
-    std::cout << std::endl << "Число в квадрате" << number << "равно " << number*number << std::endl;
+    std::cout << std::endl << "Число в квадрате " << number << " равно " << number*number << std::endl;
     return 2;
 }
 
@@ -298,19 +298,19 @@ void DeleteElement(int index){
 }
 
 int DelEmployee(){
-    std::cout<<"Choose рабочего:"<<std::endl;
+    std::cout<<"Выберете рабочего:"<<std::endl;
     DeleteElement(1);
     return 1;
 }
 
 int DelSupplier(){
-    std::cout<<"Choose Postа:"<<std::endl;
+    std::cout<<"Выберете поставщика:"<<std::endl;
     DeleteElement(2);
     return 1;
 }
 
 int DelProduct(){
-    std::cout<<"Choose Product:"<<std::abort;
+    std::cout<<"Выберете продукт:"<<std::abort;
     DeleteElement(3);
     return 1;
 
@@ -319,10 +319,10 @@ int DelProduct(){
 int add(){
     using namespace YMA;
     CMenuItem adding[4]={
-            CMenuItem("Product", AddProduct),
-            CMenuItem("Post", AddSupplier),
-            CMenuItem("worker", AddEmployee),
-            CMenuItem("Exit", Menu1)
+            CMenuItem("Продукт", AddProduct),
+            CMenuItem("Поставщик", AddSupplier),
+            CMenuItem("Рабочий", AddEmployee),
+            CMenuItem("Выход в меню", Menu1)
     };
     CMenu ADD("Menu 2", adding, 4);
     while (ADD.runCommand()){};
@@ -334,10 +334,10 @@ int add(){
 int del(){
     using namespace YMA;
     CMenuItem deleting[4]={
-            CMenuItem("Product", DelProduct),
-            CMenuItem("Post", DelSupplier),
-            CMenuItem("worker", DelEmployee),
-            CMenuItem("Exit", Menu1)
+            CMenuItem("Продукт", DelProduct),
+            CMenuItem("Поставщик", DelSupplier),
+            CMenuItem("Покупатель", DelEmployee),
+            CMenuItem("Выход в меню", Menu1)
     };
     CMenu DEL("Menu 2", deleting, 4);
     while (DEL.runCommand()){};
@@ -348,10 +348,10 @@ int del(){
 int sort(){
     using namespace YMA;
     CMenuItem sorting[4]={
-            CMenuItem("Product", SortProduct),
-            CMenuItem("Post", SortSupplier),
-            CMenuItem("worker", SortEmployee),
-            CMenuItem("Exit", Menu1)
+            CMenuItem("Продукт", SortProduct),
+            CMenuItem("Поставщик", SortSupplier),
+            CMenuItem("Покупатель", SortEmployee),
+            CMenuItem("Выход в меню", Menu1)
     };
     CMenu SORT("Menu 2", sorting, 4);
     while (SORT.runCommand()){};
@@ -364,13 +364,13 @@ int Menu1() {
     using namespace YMA;
 
     CMenuItem items[5]={
-        CMenuItem("Say hi", Say_Hi),
-        CMenuItem("Name", Favourite_Name),
-        CMenuItem("Calculate", Calculate),
-        CMenuItem("Draw", Draw),
-        CMenuItem("Classes", Menu2)
+        CMenuItem("Привет", Say_Hi),
+        CMenuItem("Имя", Favourite_Name),
+        CMenuItem("Калькулятор", Calculate),
+        CMenuItem("Рисование", Draw),
+        CMenuItem("Классы", Menu2)
     };
-    CMenu menu("Menu", items, 5);
+    CMenu menu("Меню", items, 5);
     while (menu.runCommand()){};
     return 0;
 

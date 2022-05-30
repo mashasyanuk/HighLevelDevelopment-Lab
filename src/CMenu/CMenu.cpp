@@ -27,7 +27,7 @@ namespace YMA {
             m_items[i].print();
             std::cout << "\n";
         }
-        std::cout << "0. Exit\n"; 
+        std::cout << "0. Выход\n"; 
     }
 
     int CMenu::runCommand() {
